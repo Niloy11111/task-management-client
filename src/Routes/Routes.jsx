@@ -4,6 +4,9 @@ import Home from "../Layout/Main/Pages/Home/Home";
 import Dashboard from "../Layout/Main/Pages/Dashbaord/Dashboard";
 import Login from "../Layout/Main/Pages/Login/Login";
 import Register from "../Layout/Main/Pages/Home/Register/Register";
+import UserProfile from "../Layout/Main/Pages/Dashbaord/UserProfile/UserProfile";
+import Todo from "../Layout/Main/Pages/Dashbaord/Todo/Todo";
+import CreateTask from "../Layout/Main/Pages/Dashbaord/CreateTask/CreateTask";
 
 
 export const router = createBrowserRouter([
@@ -32,8 +35,24 @@ export const router = createBrowserRouter([
         children : [
           {
             path : 'userProfile',
-            element : <h2>user</h2>
-          }
+            element : <UserProfile></UserProfile>
+          },
+          {
+            path : 'createTask',
+            element : <CreateTask></CreateTask>
+          },
+          {
+            path : 'Todo',
+            element : <Todo></Todo>
+          },
+          {
+            path : 'ongoing',
+            element : <Todo></Todo>
+          },
+          {
+            path : 'completed',
+            element : <Todo></Todo>
+          },
         ]
     }
 ])

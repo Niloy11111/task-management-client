@@ -1,10 +1,11 @@
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
 
 const Navbar = () => {
 
-    const {user} = UseAuth() ;
+    const {user, logOut} = UseAuth() ;
+
     const navlinksBeforeLogin = <>
         <li>
             <NavLink to="/" className={({ isActive, isPending }) =>
@@ -39,10 +40,10 @@ const Navbar = () => {
                 <li>
                     <button className="btn btn-sm  btn-ghost">{user?.displayName}</button>
                 </li>
-       <navLinks>   <li>  dashboard</li>
-              </navLinks>
+                <li> <Link to='/dashboard/userProfile'>Dashboard</Link> </li>
+       
                 <li>
-                    <button className="btn btn-sm  btn-ghost"  
+                    <button onClick={logOut} className="btn btn-sm  btn-ghost"  
                     >Logout</button>
 
                 </li>
