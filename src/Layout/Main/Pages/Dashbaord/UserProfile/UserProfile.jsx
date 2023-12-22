@@ -8,15 +8,15 @@ const UserProfile = () => {
    
 
     return (
-        <div className="flex items-center justify-evenly border p-8">
+        <div className="flex lg:flex-row flex-col items-center justify-evenly border p-8 gap-5 lg:gap-10 mx-10">
       
-            <img className="w-[240px] rounded-full" src={user?.photoURL}></img>
+            <img className="lg:w-[240px] rounded-full" src={user?.photoURL}></img>
           
        
 
           <div>
-          <h2 className="text-2xl text-center font-bold font-serif ">{user?.displayName}</h2>
-            <h2 className="text-2xl font-bold font-serif ">{user?.email}</h2>
+          <h2 className="text-lg lg:text-2xl text-center font-bold font-serif ">{user?.displayName}</h2>
+            <h2 className="text-xl lg:text-2xl font-bold font-serif ">{user?.email}</h2>
           </div>
     
         </div>

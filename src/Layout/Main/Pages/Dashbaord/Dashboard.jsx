@@ -6,9 +6,9 @@ const Dashboard = () => {
 
     const {logOut} = UseAuth() ;
     return (
-        <div className="flex gap-20">
+        <div className="flex lg:flex-row flex-col  lg:gap-20">
 
-            <div className="w-96 min-h-screen border-r pt-10  pl-20 menu ">
+            <div className="lg:w-96 lg:min-h-screen lg:border-r pt-10  lg:pl-20 menu mx-auto lg:mx-0">
                 <h2 className="text-lg font-Inter my-3">Task Management Dashboard</h2>
                 <ul className="space-y-2">
                <li> <NavLink to="/dashboard/userProfile"> <FaPray></FaPray> MY Profile </NavLink></li>

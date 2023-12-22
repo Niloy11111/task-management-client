@@ -42,9 +42,9 @@ const CreateTask = () => {
   }
 
     return (
-        <div>
+        <div >
 
-        <div className="w-[800px] ">
+        <div className="w-5/6 mx-auto mb-20 lg:w-[800px] ">
   
         <h2 className="text-3xl my-8 font-Montserrat font-bold text-center">Add a Task </h2>
   
