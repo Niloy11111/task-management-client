@@ -14,7 +14,7 @@ const Todo = () => {
   const [tasks , setTasks] = useState([]) ;
 
     useEffect( () => {
-        axios.get(`http://localhost:5000/tasks?userEmail=${user?.email}`)
+        axios.get(`https://task-management-server-taupe.vercel.app/tasks?userEmail=${user?.email}`)
         .then(res => {
             setTasks(res.data)
         })

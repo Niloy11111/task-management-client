@@ -57,11 +57,11 @@ const Login = () => {
     }
 
     return (
-        <div className="flex lg:flex-row flex-col h-[92vh]">
+        <div className="flex md:flex-row lg:flex-row flex-col h-[92vh]">
 
 
-           <div className="lg:w-3/4 flex justify-center items-center">
-           <div className="lg:w-1/2 mx-auto">
+           <div className="md:w-3/4 lg:w-3/4 flex justify-center items-center">
+           <div className="md:w-5/6 lg:w-1/2 mx-auto">
            <h2 className="text-3xl font-bold font-Montserrat text-center mt-10 lg-mt=0">Welcome to Hive</h2>
             <p className=" font-Montserrat font-medium mt-4 text-center">Get started - it's free. No credit card needed.</p>
 
@@ -138,7 +138,7 @@ const Login = () => {
 
            </div>
 
-           <div className="mt-10 lg-mt-0 lg:w-2/4">
+           <div className="mt-10 md:mt-0 lg-mt-0 md:w-2/4 lg:w-2/4">
             <img className="h-full w-full" src="https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png"></img>
            </div>
         </div>
