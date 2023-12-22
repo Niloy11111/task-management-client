@@ -12,6 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const { signInUser, user,  googleSignIn } = useContext(AuthContext);
+ 
 
     const [showPassword, setShowPassword] = useState(false)
     const {
@@ -31,7 +32,7 @@ const Login = () => {
             .then(res => {
                 console.log('from sign in', res.user)
                 new Swal("Login Successful!", "Welcome back!", "success")
-                navigate('/dashboard')
+                navigate('/dashboard/userProfile')
 
             })
             .catch(error => console.log(error))
@@ -48,7 +49,7 @@ const Login = () => {
             axiosPublic.post('/users', userInfo)
             .then(res => {
               console.log(res.data)
-              navigate('/dashboard') ;
+              navigate('/dashboard/userProfile') ;
             })
             new Swal("Login Successful!", "Welcome back!", "success")
 

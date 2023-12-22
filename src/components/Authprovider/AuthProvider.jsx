@@ -47,6 +47,7 @@ const AuthProvider = ({children}) => {
        const unSubscribe = onAuthStateChanged(auth, currentUser => {
               setUser(currentUser) ;
               if(currentUser){
+                setLoading(false)
                 //get token  and store client
                 const userInfo = {email : currentUser.email }  
                 // axiosPublic.post('/jwt', userInfo )
@@ -78,6 +79,7 @@ const AuthProvider = ({children}) => {
         googleSignIn,
         updateUserProfile
     }
+
 
 
     return (

@@ -28,6 +28,11 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "  bg-[#005C98] text-[#FFF] px-3 py-3 rounded" : ""
             }>HOME</NavLink>
         </li>
+      
+        <li className='bg-[#005C98] mt-5 md:mt-0 rounded text-[#FFF] py-2 lg:hidden block md:block'>
+                <Link to='/dashboard/userProfile'>Dashboard</Link>
+                </li>
+
 
         <li>
        <div className="dropdown hidden lg:block dropdown-end">
@@ -40,12 +45,9 @@ const Navbar = () => {
                 <li>
                     <button className="btn btn-sm  btn-ghost">{user?.displayName}</button>
                 </li>
-                <li> <Link to='/dashboard/userProfile'>Dashboard</Link> </li>
        
-                <li>
-                    <button onClick={logOut} className="btn btn-sm  btn-ghost"  
-                    >Logout</button>
-
+                <li className='ml-10'>
+                <Link to='/dashboard/userProfile'>Dashboard</Link>
                 </li>
             </ul>
         </div>

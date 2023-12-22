@@ -4,7 +4,9 @@ import UseAuth from "../../../../Hooks/UseAuth";
 
 const Dashboard = () => {
 
-    const {logOut} = UseAuth() ;
+    const {logOut, user} = UseAuth() ;
+    console.log(user)
+
     return (
         <div className="flex lg:flex-row flex-col  lg:gap-20">
 

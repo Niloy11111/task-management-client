@@ -16,9 +16,9 @@ const Todo = () => {
    
 
     return (
-      <div className="mx-10 mb-20">
+      <div className="mr-10 ml-16 mb-20">
         <h2 className="text-4xl font-Inter font-bold text-center my-8"> To Do Task {tasks?.length} </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3  gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
         

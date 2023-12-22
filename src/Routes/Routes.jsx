@@ -8,6 +8,7 @@ import UserProfile from "../Layout/Main/Pages/Dashbaord/UserProfile/UserProfile"
 import Todo from "../Layout/Main/Pages/Dashbaord/Todo/Todo";
 import CreateTask from "../Layout/Main/Pages/Dashbaord/CreateTask/CreateTask";
 import UpdateTask from "../Layout/Main/Pages/Dashbaord/Todo/UpdateTask";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -32,33 +33,33 @@ export const router = createBrowserRouter([
     },
     {
         path : 'dashboard',
-        element : <Dashboard></Dashboard>,
+        element : <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children : [
           {
             path : 'userProfile',
-            element : <UserProfile></UserProfile>
+            element : <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
           },
           {
             path : 'createTask',
-            element : <CreateTask></CreateTask>
+            element : <PrivateRoute><CreateTask></CreateTask></PrivateRoute>
           },
           {
             path : 'Todo',
-            element : <Todo></Todo>
+            element :<PrivateRoute> <Todo></Todo></PrivateRoute>
           },
           {
             path : 'ongoing',
-            element : <Todo></Todo>
+            element : <PrivateRoute> <Todo></Todo></PrivateRoute>
           },
           {
             path : 'completed',
-            element : <Todo></Todo>
+            element :<PrivateRoute> <Todo></Todo></PrivateRoute>
           },
           {
             path : 'updateTask/:id',
           
-            element : <UpdateTask></UpdateTask> ,
-            loader : ({params}) => fetch(`http://localhost:5000/tasks/${params.id}`)  
+            element : <PrivateRoute><UpdateTask></UpdateTask> </PrivateRoute>,
+            loader : ({params}) => fetch(`https://task-management-server-taupe.vercel.app/tasks/${params.id}`)  
           },
         ]
     }

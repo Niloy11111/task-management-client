@@ -18,7 +18,7 @@ const Footer = () => {
                         
 <div className="pt-10 lg:w-7/12 mx-auto">
                  
-  <div className="flex lg:flex-row flex-col   lg:justify-between w-3/4 my-10 mx-auto">
+  <div className="flex lg:flex-row flex-col md:flex-row  lg:justify-between w-3/4 md:w-full ld:w-3/4 my-10 mx-auto md:justify-center md:gap-14 lg:gap-0">
     
     <div className="text-white ">
       <h2 className="text-white mb-5 font-semibold">Project Management </h2> 
