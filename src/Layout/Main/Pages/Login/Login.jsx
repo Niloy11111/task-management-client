@@ -31,7 +31,7 @@ const Login = () => {
             .then(res => {
                 console.log('from sign in', res.user)
                 new Swal("Login Successful!", "Welcome back!", "success")
-                navigate('/')
+                navigate('/dashboard')
 
             })
             .catch(error => console.log(error))
@@ -48,7 +48,7 @@ const Login = () => {
             axiosPublic.post('/users', userInfo)
             .then(res => {
               console.log(res.data)
-              navigate('/') ;
+              navigate('/dashboard') ;
             })
             new Swal("Login Successful!", "Welcome back!", "success")
 
@@ -57,12 +57,12 @@ const Login = () => {
     }
 
     return (
-        <div className="flex h-[92vh]">
+        <div className="flex lg:flex-row flex-col h-[92vh]">
 
 
-           <div className="w-3/4 flex justify-center items-center">
-           <div className="w-1/2 mx-auto">
-           <h2 className="text-3xl font-bold font-Montserrat text-center">Welcome to Hive</h2>
+           <div className="lg:w-3/4 flex justify-center items-center">
+           <div className="lg:w-1/2 mx-auto">
+           <h2 className="text-3xl font-bold font-Montserrat text-center mt-10 lg-mt=0">Welcome to Hive</h2>
             <p className=" font-Montserrat font-medium mt-4 text-center">Get started - it's free. No credit card needed.</p>
 
             <div>
@@ -138,7 +138,7 @@ const Login = () => {
 
            </div>
 
-           <div className="w-2/4">
+           <div className="mt-10 lg-mt-0 lg:w-2/4">
             <img className="h-full w-full" src="https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png"></img>
            </div>
         </div>

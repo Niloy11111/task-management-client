@@ -1,20 +1,24 @@
-import { useQuery } from "@tanstack/react-query";
+
 import UseAuth from "../../../../../Hooks/UseAuth";
-import useAxiosPublic from "../../../../../Hooks/UseAxiosPublic";
+
 import SingleTodo from "./SingleTodo";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 const Todo = () => {
 
     const {user} = UseAuth() ;
-    const axiosPublic = useAxiosPublic() ;
-    const {data : tasks =  [], isPending : loading , refetch} = useQuery({
-        queryKey : ['requestedMeals'] ,
-        queryFn : async () => {
-            const res = await axiosPublic.get(`http://localhost:5000/tasks?userEmail=${user?.email}`) ;
-            return res.data
-        }
-    })
+
+
+  const [tasks , setTasks] = useState([]) ;
+
+    useEffect( () => {
+        axios.get(`http://localhost:5000/tasks?userEmail=${user?.email}`)
+        .then(res => {
+            setTasks(res.data)
+        })
+    } , [user])
 
     return (
       <div>

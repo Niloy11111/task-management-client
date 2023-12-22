@@ -1,7 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import {FaPray} from 'react-icons/fa';
+import UseAuth from "../../../../Hooks/UseAuth";
 
 const Dashboard = () => {
+
+    const {logOut} = UseAuth() ;
     return (
         <div className="flex gap-20">
 
@@ -15,6 +18,7 @@ const Dashboard = () => {
                    <li> <NavLink to="/dashboard/ongoing"> <FaPray></FaPray> Ongoing Task</NavLink></li>
                    <li> <NavLink to="/dashboard/completed"> <FaPray></FaPray> Completed Task</NavLink></li>
                    <li> <NavLink to="/"> <FaPray></FaPray> Go Home</NavLink></li>
+                   <li onClick={logOut}> <NavLink to="/"> <FaPray></FaPray>Logout </NavLink></li>
                 </ul>
             </div>
 

@@ -57,7 +57,7 @@ const Navbar = () => {
 
     return (
        <div className=' shadow-md'>
-         <div className="flex px-10 max-w-7xl mx-auto   bg-[#FFFFFF] items-center flex-col lg:flex-row py-3 lg:py-4 justify-between">
+         <div className="flex px-10 lg:max-w-7xl mx-auto bg-[#FFFFFF] items-center flex-col lg:flex-row  py-3 lg:py-4 justify-between">
 
 
 <div className="navbar-start flex items-center">
@@ -89,13 +89,6 @@ const Navbar = () => {
        user? navLinks : navlinksBeforeLogin
         }
 
-        {/* <NavLink to="/addProduct" className={({ isActive, isPending }) =>
-isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
-}><li>Add Product</li></NavLink>
-
-<NavLink to="/myCart" className={({ isActive, isPending }) =>
-isPending ? "pending" : isActive ? "text-[#FF444A]  underline" : ""
-}><li>My Cart</li></NavLink> */}
 
 
 
